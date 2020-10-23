@@ -1,0 +1,42 @@
+server:
+  port: 6666
+
+spring:
+  application:
+    name: service-template-redis
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  data:
+    mongodb:
+      uri: mongodb://user:password@x.x.x.x:27017/IM
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://user:password@x.x.x.x:5901/eureka
+    healthcheck:
+      enabled: true                             # 开启健康检查（依赖spring-boot-starter-actuator）
+  instance:
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 5      # 心跳时间，即服务续约间隔时间（缺省为30s）
+    lease-expiration-duration-in-seconds: 10  # 发呆时间，即服务续约到期时间（缺省为90s）
+
+feign:
+  hystrix:
+    #    enabled: true # feign 默认关闭 hystrix,需要熔断时必须加上该配置
+    enabled: false # feign 默认关闭 hystrix,需要熔断时必须加上该配置
+
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 60000
+  eureka:
+    enabled: true
+
+logging:
+  level:
+    # ERROR 为严重错误 主要是程序的错误
+    # WARN 为一般警告，比如session丢失
+    # INFO 为一般要显示的信息，比如登录登出
+    # DEBUG 为程序的调试信息
+    com.inta.mid.biz.unilogin: info
