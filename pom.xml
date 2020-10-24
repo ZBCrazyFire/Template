@@ -18,7 +18,8 @@
     </parent>
 
     <modules>
-        <module>redis-template</module>
+        <module>redisTemplate</module>
         <module>mongoTemplate</module>
+        <module>multiMongoTemplate</module>
     </modules>
 </project>

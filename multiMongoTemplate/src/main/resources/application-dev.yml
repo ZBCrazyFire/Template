@@ -3,18 +3,21 @@ server:
 
 spring:
   application:
-    name: service-template-mongo
+    name: service-template-multi-mongo
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
   data:
     mongodb:
-      uri: mongodb://user:password@x.x.x.x:27017/IM
+      first:
+        uri: mongodb://user:password@host:27017/IM
+      second:
+        uri: mongodb://user:password@host:27017/IM
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://user:password@x.x.x.x:5901/eureka
+      defaultZone: http://user:password@host:5901/eureka
     healthcheck:
       enabled: true                             # 开启健康检查（依赖spring-boot-starter-actuator）
   instance:
