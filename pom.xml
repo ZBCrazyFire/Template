@@ -21,5 +21,6 @@
         <module>redisTemplate</module>
         <module>mongoTemplate</module>
         <module>multiMongoTemplate</module>
+        <module>pdfTemplate</module>
     </modules>
 </project>
