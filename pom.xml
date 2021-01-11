@@ -22,5 +22,6 @@
         <module>mongoTemplate</module>
         <module>multiMongoTemplate</module>
         <module>pdfTemplate</module>
+        <module>QrTemplate</module>
     </modules>
 </project>
