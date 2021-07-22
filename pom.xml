@@ -23,5 +23,6 @@
         <module>multiMongoTemplate</module>
         <module>pdfTemplate</module>
         <module>QrTemplate</module>
+        <module>opencvTemplate</module>
     </modules>
 </project>
