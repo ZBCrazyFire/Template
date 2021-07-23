@@ -50,6 +50,11 @@
             <scope>system</scope>
             <systemPath>${project.basedir}/src/main/resources/lib/opencv-453.jar</systemPath>
         </dependency>
+        <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+            <artifactId>tess4j</artifactId>
+            <version>4.3.1</version>
+        </dependency>
         <!-- lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
