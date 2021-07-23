@@ -70,7 +70,7 @@ public class OpencvImgTest {
          * 3、对灰度图像进行二值化处理
          */
         Mat binaryMat = new Mat(grayMat.height(), grayMat.width(), CvType.CV_8UC1);
-        Imgproc.threshold(grayMat, binaryMat, 20, 255, Imgproc.THRESH_BINARY);
+        Imgproc.threshold(grayMat, binaryMat, 100, 255, Imgproc.THRESH_BINARY);
         BufferedImage binaryImage = toBufferedImage(binaryMat);
         saveJpgImage(binaryImage, "D:/opencv/opencvtest/binaryImage.jpg");
         System.out.println("保存二值化图像！");
@@ -105,13 +105,13 @@ public class OpencvImgTest {
             }
             if (state == 0)//还未到有效行
             {
-                if (count >= 10)//找到了有效行
+                if (count >= 150)//找到了有效行
                 {//有效行允许十个像素点的噪声
                     a = y;
                     state = 1;
                 }
             } else if (state == 1) {
-                if (count <= 10)//找到了有效行
+                if (count <= 150)//找到了有效行
                 {//有效行允许十个像素点的噪声
                     b = y;
                     state = 2;
